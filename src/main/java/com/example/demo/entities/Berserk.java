@@ -1,24 +1,16 @@
 package com.example.demo.entities;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
-import java.util.UUID;
 
 @Entity
-//@Getter
-//@Setter
+
 public class Berserk {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @GeneratedValue(generator = "uuid")
-//    @GenericGenerator( name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
-//    @Column(name = "id" , columnDefinition = "VARCHAR(255)")
     private Long id;
 
     @Size(max = 1000)

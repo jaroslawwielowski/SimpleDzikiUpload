@@ -13,17 +13,29 @@
 </head>
 <body>
 
-<form:form method="post"
-           modelAttribute="user" action="/register">
-    <form:input path="firstName" placeholder="Imię"/><br>
-    <form:input path="email" placeholder="Email"/><br>
+<table border="5" align="center" width="600" height="200">
+    <td align="right">
+        <form:form method="post"
+                   modelAttribute="berserk" action="posts/add">
+            <form:textarea path="description" cols="92" rows="10" placeholder="Jak Ci mija dzień?"/><br>
+            <input type="submit" value="dodaj post" >
+        </form:form>
+    </td>
+    <td>
 
-    Data Urodzenia: <br>
-    <form:select path="userDetails.dayOfBirth" items="${dayOfBirth}"/>
-    <form:select path="userDetails.monthOfBirth" items="${monthOfBirth}" />
-    <form:select path="userDetails.yearsOfBirth" items="${yearOfBirth}" /><br>
-    <input type="submit" value="Rejestracja"><br>
-</form:form>
+    <c:forEach items="${posts}" var="onepost" end="9">
+        <table border="5" width="600" height="200" align="center">
+            <tr height="10" >
+                <td >${onepost.user.firstName} ${onepost.user.lastName}</td>
+            </tr>
+            <tr>
+                <td>${onepost.description}</td>
+            </tr>
+        </table>
+    </c:forEach>
+    </td>
+
+</table>
 
 </body>
 </html>

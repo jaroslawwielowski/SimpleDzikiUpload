@@ -16,6 +16,8 @@ public class Berserk {
     @Size(max = 1000)
     private String description;
 
+    private String login;
+
     @Email
     private String email;
 
@@ -28,6 +30,22 @@ public class Berserk {
     public Berserk(@Size(max = 1000) String description, @Email String email, Byte pic) {
         this.description = description;
         this.email = email;
+        this.pic = pic;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public Byte getPic() {
+        return pic;
+    }
+
+    public void setPic(Byte pic) {
         this.pic = pic;
     }
 

@@ -8,4 +8,6 @@ public class BerserkService {
     private String createConfirmationID() {
         return java.util.UUID.randomUUID().toString();
     }
+
+
 }

@@ -15,6 +15,7 @@
 
 <table border="5" align="center" width="600" height="200">
     <td align="right">
+        <%--@elvariable id="berserk" type="com.example.demo.entities.Berserk"--%>
         <form:form method="post"
                    modelAttribute="berserk" action="posts/add">
             <form:textarea path="description" cols="92" rows="10" placeholder="Jak Ci mija dzień?"/><br>

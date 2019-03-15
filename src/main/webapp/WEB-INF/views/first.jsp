@@ -24,16 +24,16 @@
     </td>
     <td>
 
-    <c:forEach items="${posts}" var="onepost" end="9">
-        <table border="5" width="600" height="200" align="center">
-            <tr height="10" >
-                <td >${onepost.user.firstName} ${onepost.user.lastName}</td>
-            </tr>
-            <tr>
-                <td>${onepost.description}</td>
-            </tr>
-        </table>
-    </c:forEach>
+        <c:forEach items="${posts}" var="onepost" end="9">
+            <table border="5" width="600" height="200" align="center">
+                <tr height="10" >
+                    <td >${onepost.user.firstName} ${onepost.user.lastName}</td>
+                </tr>
+                <tr>
+                    <td>${onepost.description}</td>
+                </tr>
+            </table>
+        </c:forEach>
     </td>
 
 </table>

@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 @Entity
-
+@Table(name = "berserks")
 public class Berserk {
 
     @Id
@@ -21,33 +21,12 @@ public class Berserk {
     @Email
     private String email;
 
-    private Byte pic;
+//    private Byte pic;
 
 
     public Berserk() {
     }
 
-    public Berserk(@Size(max = 1000) String description, @Email String email, Byte pic) {
-        this.description = description;
-        this.email = email;
-        this.pic = pic;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public Byte getPic() {
-        return pic;
-    }
-
-    public void setPic(Byte pic) {
-        this.pic = pic;
-    }
 
     public Long getId() {
         return id;
@@ -63,6 +42,14 @@ public class Berserk {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getEmail() {

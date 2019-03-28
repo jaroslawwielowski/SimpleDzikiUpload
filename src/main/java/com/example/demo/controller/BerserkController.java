@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.entities.Berserk;
 import com.example.demo.repository.BerserkRepository;
 import com.example.demo.service.BerserkService;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,8 @@ public class BerserkController {
 
     @GetMapping(value = "/")
 //    @ResponseBody
-    public String home(HttpServletRequest request, HttpServletResponse response, Model model){
+    public String home(Model model){
+        model.addAttribute(new Berserk());
         return "first";
     }
 

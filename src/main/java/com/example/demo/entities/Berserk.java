@@ -4,6 +4,7 @@ package com.example.demo.entities;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
@@ -16,12 +17,14 @@ public class Berserk {
     private Long id;
 
     @Size(max = 1000)
+    @NotEmpty
     private String description;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;
 
     @Size(max = 30)
+    @NotEmpty
     private String login;
 
 

@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Controller
 public class BerserkController {
@@ -26,6 +29,13 @@ public class BerserkController {
     @GetMapping(value = "/")
 //    @ResponseBody
     public String home(Model model){
+        List<Berserk> allBerserkList = new ArrayList<>();
+        try {
+            allBerserkList = berserkRepository.findAll();
+        }catch (Exception e){
+        }
+        Collections.reverse(allBerserkList);
+        model.addAttribute("posts", allBerserkList);
         model.addAttribute(new Berserk());
         return "first";
     }

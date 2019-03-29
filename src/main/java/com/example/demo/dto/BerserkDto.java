@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.example.demo.dto;
 
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "berserks")
-public class Berserk {
+public class BerserkDto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class Berserk {
     private String login;
 
 
-    public Berserk() {
+    public BerserkDto() {
     }
 
 

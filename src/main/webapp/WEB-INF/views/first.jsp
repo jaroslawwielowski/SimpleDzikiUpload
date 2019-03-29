@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %><html>
 <head>
@@ -23,7 +24,7 @@
         </form:form>
     </td>
     <td>
-
+        wszystkie posty
         <c:forEach items="${posts}" var="onepost" end="9">
             <table border="5" width="600" height="200" align="center">
                 <tr height="10" >

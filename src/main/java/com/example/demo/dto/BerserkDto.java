@@ -1,27 +1,23 @@
 package com.example.demo.dto;
 
 
+import com.example.demo.entities.Berserk;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "berserks")
+
 public class BerserkDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @Size(max = 1000)
     private String description;
 
-    @CreationTimestamp
     private LocalDateTime createDateTime;
 
-    @Size(max = 30)
     private String login;
 
 
@@ -59,5 +55,13 @@ public class BerserkDto {
 
     public void setCreateDateTime(LocalDateTime createDateTime) {
         this.createDateTime = createDateTime;
+    }
+
+    public Berserk toDto(){
+        Berserk berserk = new Berserk();
+        berserk.setDescription(getDescription());
+        berserk.setLogin(getLogin());
+        berserk.setCreateDateTime(getCreateDateTime());
+        return berserk;
     }
 }

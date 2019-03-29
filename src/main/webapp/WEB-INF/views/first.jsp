@@ -18,17 +18,20 @@
     <td align="right">
         <%--@elvariable id="berserk" type="com.example.demo.entities.Berserk"--%>
         <form:form method="post"
-                   modelAttribute="berserk" action="posts/add">
-            <form:textarea path="description" cols="92" rows="10" placeholder="Jak Ci mija dzień?"/><br>
+                   modelAttribute="berserk" action="/">
+            <form:textarea path="description" cols="96" rows="10" placeholder="Jak Ci mija dzień?"/><br>
+            <form:input path="login" placeholder="nick"/>
             <input type="submit" value="dodaj post" >
         </form:form>
-    </td>
-    <td>
+<%--    </td>--%>
+
+            <br>
+<%--    <td>--%>
         wszystkie posty
-        <c:forEach items="${posts}" var="onepost" end="9">
+        <c:forEach items="${berserks}" var="onepost" end="9">
             <table border="5" width="600" height="200" align="center">
                 <tr height="10" >
-                    <td >${onepost.user.firstName} ${onepost.user.lastName}</td>
+                    <td >${onepost.login} ---- ${onepost.createDateTime}</td>
                 </tr>
                 <tr>
                     <td>${onepost.description}</td>

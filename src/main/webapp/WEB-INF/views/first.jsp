@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jaroslawwielowski
-  Date: 2019-03-11
-  Time: 02:23
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -23,10 +16,8 @@
             <form:input path="login" placeholder="nick"/>
             <input type="submit" value="dodaj post" >
         </form:form>
-<%--    </td>--%>
 
             <br>
-<%--    <td>--%>
         wszystkie posty
         <c:forEach items="${berserks}" var="onepost" end="9">
             <table border="5" width="600" height="200" align="center">

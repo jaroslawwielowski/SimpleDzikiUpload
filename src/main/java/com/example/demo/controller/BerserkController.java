@@ -27,7 +27,6 @@ public class BerserkController {
 
 
     @GetMapping(value = "/")
-//    @ResponseBody
     public String home(Model model){
         List<Berserk> allBerserkList = new ArrayList<>();
         try {
